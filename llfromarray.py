@@ -1,7 +1,7 @@
 # creating linked list node.
 class Node:
-  def __init__(self, data, next):
-    self.data = data
+  def __init__(self, val, next):
+    self.val = val
     self.next = next
 
 
@@ -15,7 +15,7 @@ def linkedListBuilder(arr: list) -> str:
     This takes the value as the first element
     from the list and set next pointer to None.
     '''
-    node = Node(data=arr.pop(0), next=None)
+    node = Node(val=arr.pop(0), next=None)
     
     if not head: head = node  # Since, at first head node is always null, so we put the first node in head.
     else: prev_node.next = node  # when we already have the head node, now we will keep track of the previous node.
@@ -29,7 +29,7 @@ def linkedListBuilder(arr: list) -> str:
   linkedList = ''
   
   while head:
-    linkedList += str(head.data) + ' -> '
+    linkedList += str(head.val) + ' -> '
     head = head.next
   
   return linkedList + 'None'  # adding None because while loop ends when head got out of the linked list.
