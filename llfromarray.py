@@ -1,4 +1,4 @@
-# creating linked list node.
+# Constructing linked list node.
 class Node:
   def __init__(self, val, next):
     self.val = val
